@@ -1,0 +1,8 @@
+// to resolve 0px height after child elements are floated
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
