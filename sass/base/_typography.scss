@@ -42,6 +42,7 @@ body {
     display: inline-block;
 
     -webkit-background-clip: text; // clip the gradient where the text sits
+    background-clip: text;
     color: transparent;
 
     letter-spacing: 2px; // leave it at pixels since it is too small to be relevant
@@ -51,5 +52,19 @@ body {
     &:hover {
         transform: skewY(2deg) skewX(15deg) scale(1.1);
         text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+    }
+}
+
+.heading-tertiary {
+    font-size: $default-font-size;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-size: $default-font-size;
+
+    &:not(:last-child) {
+        margin-bottom: 3rem;
     }
 }
