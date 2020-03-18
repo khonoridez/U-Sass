@@ -64,6 +64,7 @@
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); // clips picture on edge
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
+        // clip-path will disable the overflow so we have to set the border radius of the cards once again
         border-top-left-radius: 3px;
         border-top-right-radius: 3px;
 
