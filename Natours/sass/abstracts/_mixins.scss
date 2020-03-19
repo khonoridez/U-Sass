@@ -21,11 +21,6 @@
 // [1200 - 1800px] : Normal styles
 // 1800px + : Big Desktop
 
-@mixin respond-phone {
-    // @content was declared in _base.scss
-    @media (max-width: 600px) { @content };
-}
-
 // $breakpoint arguments:
 // - phone
 // - tab-port
