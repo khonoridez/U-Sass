@@ -568,7 +568,7 @@ body {
     font-size: 3rem;
     text-decoration: none;
     display: inline-block;
-    transition: L  all .2s;
+    transition: all .2s;
     line-height: 1; }
   .popup__close:hover {
     color: #55c57a; }
