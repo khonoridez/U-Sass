@@ -8,7 +8,29 @@
 
 html {
     // defines what 1rem should be
-    font-size: 62.5%;
+    font-size: 62.5%; // 1rem = 10px; 10px/16px = 62.5%
+
+    // Breakpoint Manager
+    // Pass value/parameters/block of code to a mixin
+
+    // We have to switch orders because width < 600? and  width < 900? will both apply
+    // larger ones before smaller ones
+    @include respond(tab-land) { // width < 900?
+        font-size: 56.25%; // 1rem = 9px, 9/16 = 56.25%
+    }
+    
+    @include respond(tab-port) { // width < 600?
+        font-size: 50%; // 1rem = 8px, 8/16 = 50%
+    }
+
+    // @include respond(phone) {
+    //     font-size: 30%;
+    // }
+
+    @include respond(big-desktop) {
+        font-size: 75%; // 1rem = 12px, 12/16 = 75%
+    }
+    // Breakpoint Manager End
 }
 
 body {
