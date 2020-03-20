@@ -1,4 +1,20 @@
-Build Process
++++++ Start project +++++
+
+- css
+- img
+- sass
+index.html
+
+> npm init
+> npm install node-sass --save-dev
+
+"scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+}
+
+> npm run compile:sass
+
++++++ Build Process +++++
 
 > npm install concat --save-dev
 > npm install autoprefixer --save-dev
