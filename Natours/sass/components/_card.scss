@@ -165,7 +165,12 @@
         font-weight: 100;
     }
 
-    @include respond(tab-port) {
+    //@include respond(tab-port) { 
+
+    // we cannot add another condition to @include so we replace with @media...
+    // redesign card to not show back part if smaller and device that uses touch
+    @media only screen and (max-width: 56.25em), 
+        only screen and (hover: none) {
         height: auto;
         border-radius: $border-radius;
         background-color: $color-white;
