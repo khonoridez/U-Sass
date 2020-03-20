@@ -14,13 +14,17 @@
 }
 
 .content {
-    
+    display: flex; // initiate flex
 }
 
-.sidebar {
+.sidebar { // child flex of content
     background-color: var(--color-grey-dark-1);
+
+    flex: 0 0 10%;
 }
 
 .hotel-view {
-    background-color: #fff;
+    background-color: orangered;
+    
+    flex: 1; // occupy all space
 }
