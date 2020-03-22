@@ -361,3 +361,30 @@
 
 ////////////////////////
 ////////// RECOMMEND
+.recommend {
+    font-size: 1.3rem;
+    color: var(--color-grey-dark-3);
+
+    display: flex;
+    align-items: center;
+
+    &__count {
+        margin-right: auto; // FLEX trick to push the other element
+    }
+
+    &__friends {
+        
+    }
+
+    &__photo {
+        box-sizing: content-box; // automatically set border on top of the width, bypass default of border-box declared in _base
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        border: 3px solid #fff;
+
+        &:not(:last-child) {
+            margin-right: -1.5rem; // trick to stack pictures on top of each other
+        }
+    }
+}
