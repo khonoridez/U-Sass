@@ -5,6 +5,32 @@
 
     // Manually create new grid
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    // Set auto-fit to automatically set number of columns based on width
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+
     grid-gap: 6rem;
+
+    // By default  grid aligns items via stretch
+    align-items: start;
+}
+
+.feature {
+    // Nest another grid
+    display: grid;
+    grid-template-columns: min-content 1fr;
+
+    grid-row-gap: 1.5rem;
+    grid-column-gap: 2.5rem;
+
+    &__icon {
+        fill: $color-primary;
+        width: 4.5rem;
+        height: 4.5rem;
+        grid-row: 1 / span 2; // use span 2 instead of -1 because we did not specify the template-row
+        transform: translateY(-1rem);
+    }
+
+    &__text {
+        font-size: 1.7rem;
+    }
 }
