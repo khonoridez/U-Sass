@@ -1,0 +1,7 @@
+.header {
+    background-color: $color-grey-dark-1;
+    
+    // end at the 6th mark of col-end
+    // repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+    grid-column: full-start / col-end 6;
+}

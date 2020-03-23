@@ -1,0 +1,5 @@
+.sidebar {
+    background-color: $color-primary;
+    grid-column: sidebar-start / sidebar-end; // beginning and end of column
+    grid-row: 1 / -1; // start at beginning and ends at the very bottom
+}

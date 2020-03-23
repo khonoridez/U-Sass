@@ -1,0 +1,7 @@
+.realtors {
+    background-color: $color-secondary;
+
+    //start at the 7th mark of the col-start
+    // repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+    grid-column: col-start 7 / full-end;
+}
