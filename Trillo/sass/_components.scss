@@ -14,6 +14,12 @@
     align-items: center;
     justify-content: center;
 
+    @media only screen and (max-width: $bp-smallest) {
+        order: 1; // Set the search box at the right-most (last)
+        flex: 0 0 100%; // Set the search box wider by setting the flex basis at 100%
+        background-color: var(--color-grey-light-2);
+    }
+
     &__input {
         font-family: inherit;
         font-size: inherit;
@@ -200,6 +206,12 @@
             justify-content: center;
             padding: 2rem;
         }
+
+        // move the link icons on top of icon text
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+            padding: 1.5rem .5rem; // lessen side paddings
+        }
     }
 
     &__icon {
@@ -207,6 +219,14 @@
         height: 1.75rem;
         margin-right: 2rem;
         fill: currentColor; // color of current element or parent element
+
+        // Center icon and lessen dimensions
+        @media only screen and (max-width: $bp-small) {
+            margin-right: 0;
+            margin-bottom: .7rem;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
     }
 }
 
@@ -248,6 +268,11 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         padding: 1.5rem 3rem;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.8rem;
+            padding: 1.25rem 2rem;
+        }
     }
 
     &__stars {
@@ -283,17 +308,29 @@
         flex-direction: column; // Align horizontally
         align-items: center;
         justify-content: center;
+
+        @media only screen and (max-width: $bp-small) {
+            padding: 0 1.5rem;
+        }
     }
 
     &__rating-average {
         font-size:  2.25rem;
         font-weight: 300;
         margin-bottom: -3px;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size:  1.8rem;
+        }
     }
 
     &__rating-count {
         font-size:  .8rem;
         text-transform: uppercase;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size:  .5rem;
+        }
     }
 }
 
@@ -487,7 +524,7 @@
         left: -1rem;
         line-height: 1;
         font-size: 20rem;
-        color: var(--color-grey-light-2);
+        color: var(--color-grey-light-4);
         font-family: sans-serif;
         z-index: 1; // To move quotation icon behind, set .text to higher z-index
     }

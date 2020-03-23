@@ -29,8 +29,8 @@
     --color-grey-dark-2: #777;
     --color-grey-dark-3: #999;
 
-    --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
-    --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .3);
+    --shadow-light: 0 2rem 5rem rgba(0,0,0, .2);
+    --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .4);
 
     --line: 1px solid var(--color-grey-light-2);
 }
@@ -39,6 +39,8 @@
 $bp-largest: 75em; // bp (breakpoint) 1200px / 16
 $bp-large: 68.75em; // bp (breakpoint) 1100px / 16
 $bp-medium: 56.25em; // bp (breakpoint) 900px / 16
+$bp-small: 37.5em; // bp (breakpoint) 600px / 16
+$bp-smallest: 31.25em; // bp (breakpoint) 500px / 16
 
 * {
     margin: 0;
