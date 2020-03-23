@@ -126,12 +126,28 @@
     list-style: none;
     margin-top: 3.5rem;
 
+    // To set side nav icons horizontally on top page
+    @media only screen and (max-width: $bp-medium) {
+        display: flex;
+        margin: 0;
+    }
+
     &__item {
         position: relative; // in order for pseudo element to be positioned in relation to parent
 
         &:not(:last-child) {
             margin-bottom: .5rem;
-        }    
+
+            // remove the margin when side nav is on top
+            @media only screen and (max-width: $bp-medium) {
+                margin-bottom: 0;
+            }
+        }
+
+        // When side nav is on top, all items occupy equal parts
+        @media only screen and (max-width: $bp-medium) {
+            flex: 1;
+        }
     }
 
     // pseudo element
@@ -179,6 +195,11 @@
         // flex usage to align  center
         display: flex;
         align-items: center;
+
+        @media only screen and (max-width: $bp-medium) {
+            justify-content: center;
+            padding: 2rem;
+        }
     }
 
     &__icon {
@@ -196,6 +217,11 @@
     color: var(--color-grey-light-4);
     text-align: center;
     padding: 2.5rem;
+
+    // Remove when side nav is on upper part of page
+    @media only screen and (max-width: $bp-medium) {
+        display: none;
+    }
 }
 
 ////////////////////////
@@ -408,6 +434,11 @@
     position: relative;
     overflow: hidden;
 
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem;
+        margin-bottom: 3rem;
+    }
+
     &__text {
         margin-bottom: 2rem;
         z-index: 10; // will  only work with position set
@@ -467,6 +498,10 @@
 .cta {
     padding: 3.5rem 0;
     text-align: center;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2.5rem 0;
+    }
 
     &__book-now {
         font-size: 1.5rem;
