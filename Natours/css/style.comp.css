@@ -305,7 +305,7 @@ body {
         font-size: 1.5rem;
         padding: 1rem; }
         .card__details ul li:not(:last-child) {
-          border-bottom: 1px solid #eee; }
+          border-bottom: var(--line); }
   .card__cta {
     position: absolute;
     top: 50%;
@@ -555,10 +555,10 @@ body {
     margin-bottom: 4rem;
     -moz-column-count: 2;
     -moz-column-gap: 4rem;
-    -moz-column-rule: 1px solid #eee;
+    -moz-column-rule: var(--line);
     column-count: 2;
     column-gap: 4rem;
-    column-rule: 1px solid #eee;
+    column-rule: var(--line);
     -moz-hyphens: auto;
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
