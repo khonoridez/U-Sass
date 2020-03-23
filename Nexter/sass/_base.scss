@@ -44,10 +44,4 @@ body {
     // 8 columns, set grid line names
     // We are only naming the columns and not the rows
     grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-
-    // All child elements
-    & > * {
-        padding: 40px;
-        font-size: 3rem;
-    }
 }
